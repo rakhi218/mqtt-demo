@@ -28,10 +28,8 @@ mqtt_client.on_publish = on_publish
 mqtt_client.loop_start()
 
 # Publish messages to the MQTT topic every 1 second
-count = 0
 while True:
     t = random.randint(0, 6)
-    count += 1
-    msg = {"status": t, "count": count}
+    msg = {"status": t}
     mqtt_client.publish("mqtt_topic", json.dumps(msg), qos=1, retain=False)
     time.sleep(1)

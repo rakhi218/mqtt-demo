@@ -30,7 +30,7 @@ virtualenv <virtual_env_name>
 source <virtual_env_name>/bin/activate
 
 # install packages in requirements.txt
-pip install requirements.txt
+pip install -r requirements.txt
 
 # install mongodb - follow the steps
 https://www.geeksforgeeks.org/how-to-install-and-configure-mongodb-in-ubuntu/
